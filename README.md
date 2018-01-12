@@ -1,12 +1,12 @@
-# webpack-react-ant
-> Webpack for ant design.
+# webpack-react-wechat
+> Wechat h5 page based on webpack and react.
 
 ## build dist:
 <img src='./docs/optimize_build.png' width="394" />
 
 ## get-start:
 ```bash
-git clone https://github.com/afeiship/webpack-react-ant.git
+git clone https://github.com/afeiship/webpack-react-wechat.git
 npm install 
 npm run build
 npm run start
