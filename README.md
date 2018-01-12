@@ -1,9 +1,6 @@
 # webpack-react-wechat
 > Wechat h5 page based on webpack and react.
 
-## build dist:
-<img src='./docs/optimize_build.png' width="394" />
-
 ## get-start:
 ```bash
 git clone https://github.com/afeiship/webpack-react-wechat.git
@@ -20,8 +17,8 @@ npm run start
 + [x] fonts/images to folder
 + [x] react-router v4
 + [x] HtmlWebpack -> webpack favico.ico
-+ [x] ant-design optmize
 + [x] add spinkit for app
++ [x] wechat jssdk
 
 ## resources:
 + https://s.61qt.cn/admin_login
