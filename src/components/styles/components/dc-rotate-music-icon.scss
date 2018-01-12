@@ -1,0 +1,42 @@
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.rotation {
+  -webkit-transform: rotate(360deg);
+  animation: rotation 3s linear infinite;
+  -moz-animation: rotation 3s linear infinite;
+  -webkit-animation: rotation 3s linear infinite;
+  -o-animation: rotation 3s linear infinite;
+}
+
+.dc-rotate-music-icon {
+  position: absolute;
+  border: none;
+  right: 0.3rem;
+  top: 0.3rem;
+  z-index: 1;
+  background: #fff;
+  font-size: 0.24rem;
+  padding: 0.2rem;
+  width: 0.24rem;
+  height: 0.24rem;
+  background: url(../../assets/images/music-icon.png) no-repeat center center;
+  background-size: 100%;
+  outline: none;
+
+  &::after {
+    position: absolute;
+    content: '';
+    display: block;
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    left: -10px;
+  }
+}

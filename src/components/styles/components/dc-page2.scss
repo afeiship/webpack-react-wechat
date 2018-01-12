@@ -1,0 +1,12 @@
+.dc-page2{
+  >.inner{
+    @include size( to-rem(315), to-rem(322));
+  }
+
+
+
+  .page2-text2 {
+    width: to-rem(315);
+    height:to-rem(286);
+  }
+}

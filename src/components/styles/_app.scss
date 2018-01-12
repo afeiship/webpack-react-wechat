@@ -1,0 +1,38 @@
+html,
+body,
+#app,
+.app-container,
+.route-wrapper {
+  height: 100%;
+  overflow: hidden;
+}
+
+button{
+  outline: none;
+  background: none;
+  border: none;
+}
+
+.app-container {
+  background:#000 url(../../assets/images/bg.jpg) no-repeat center center;
+  background-size: contain;
+}
+
+.blink-element {
+  animation-name: blink-element;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blink-element {
+  0% {
+    opacity: 1.0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
