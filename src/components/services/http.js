@@ -15,7 +15,7 @@ const Http = nx.declare({
   methods: {
     setRequestInterceptor: function () {
       this.axios.interceptors.request.use((config) => {
-        nx.mix(config.headers.common, {clientType: 'h5'});
+        nx.mix(config.headers.common, { clientType: 'h5' });
         return config;
       });
     },
