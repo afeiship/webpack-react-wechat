@@ -1,16 +1,21 @@
-export default class {
+const ENV = require(`environments/__BUILD_ENV__`).default;
 
-  static VERSION = '__BUILD_VERSION__';
+export default class {
+  static HASH = '__BUILD_HASH__';
   static APIS = {
-    baseUrl: `//${location.host}/app/interface/mobile/pmall/`,
+    host: ENV.BASE_URL,
+    request: ['/api/vi', 'json'],
     items: [
-      'test1',
-      'getWeixinShareSign_220',
-      'memberRegisterTime_230'
+      {
+        items: {
+          upload: ['post', '/system/upload'],
+          login: ['post', '/auth/admin/signin'],
+          banner_index: ['get', '/system/banners'],
+          banner_create: ['post', '/system/banner'],
+          banner_delete: ['delete', '/system/banner/{id}'],
+          banner_update: ['put', '/system/banner/{id}']
+        }
+      }
     ]
   };
-
 }
-
-
-

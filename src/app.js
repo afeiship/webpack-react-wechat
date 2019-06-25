@@ -1,30 +1,21 @@
-import AppBase, {
-  $api, $store,
-  DcVideo,
-  DcAudio,
-  DcRotateMusicIcon,
-  DcPage1,
-  DcPage2,
-  DcPage3,
-  DcBlinkArrow
-} from 'components/scripts/index';
-import NxDetectWechat from 'next-detect-wechat';
-import NxDomEvent from 'next-dom-event';
-export default class extends AppBase {
+import { ReduxAppBase } from 'next-react-redux';
+import hotable from 'react-hmr-decorator';
 
-  static initialState() {
+@hotable(module)
+export default class extends ReduxAppBase {
+  static initialState(inStore) {
     return {
       memory: {
-        isWechat: NxDetectWechat.isWechat()
+        hasUpdate: false
       }
-    }
+    };
+  }
+
+  eventBus(inName, inData) {
+    console.log('*, I am - global event bus center:->', inName, inData);
   }
 
   render() {
-    return (
-      <div className="app-container">
-        APP CONTENT!
-      </div>
-    );
+    return <div className="hello">Hello 123!</div>;
   }
 }

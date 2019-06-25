@@ -1,32 +1,15 @@
 {
-  "presets": [
-    "es2015",
-    "react",
-    "stage-0"
-  ],
+  "presets": ["@babel/preset-env", "@babel/preset-react"],
   "plugins": [
-    "transform-array-from",
-    "transform-class-properties",
-    "transform-es2015-spread",
-    "transform-object-rest-spread",
-    "transform-decorators-legacy",
     [
-      "module-resolver",
+      "@babel/plugin-proposal-decorators",
       {
-        "root": [
-          "."
-        ],
-        "alias": {
-          "node_modules": "./node_modules",
-          "assets": "./src/assets",
-          "images": "./src/assets/images",
-          "components": "./src/components",
-          "styles": "./src/components/styles",
-          "services": "./src/components/services",
-          "scripts": "./src/components/scripts",
-          "mixins": "./src/components/mixins"
-        }
+        "legacy": true
       }
-    ]
+    ],
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-transform-spread",
+    "@babel/plugin-proposal-object-rest-spread",
+    "@babel/plugin-syntax-dynamic-import"
   ]
 }

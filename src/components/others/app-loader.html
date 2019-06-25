@@ -1,8 +1,4 @@
 <style>
-    body {
-        background: #000;
-    }
-
     .app-loading-tip {
         position: absolute;
         margin: auto;
@@ -21,7 +17,7 @@
     }
 
     .sk-wave.app-loading-wave .app-loading-rect {
-        background-color: #fff;
+        background-color: #68bf4a;
         margin: 0 1px;
     }
 
@@ -47,12 +43,6 @@
             z-index: -1;
         }
     }
-
-    .loader-text {
-        text-align: center;
-        font-size: 14px;
-        color: #fff;
-    }
 </style>
 <div class="app-loading-tip" id="app-loading-tip">
     <div class="sk-wave app-loading-wave">
@@ -62,5 +52,5 @@
         <div class="app-loading-rect sk-rect sk-rect4"></div>
         <div class="app-loading-rect sk-rect sk-rect5"></div>
     </div>
-    <div class="loader-text">系统正在初始化，请稍等...</div>
+    <div style="text-align: center">系统正在初始化，请稍等...</div>
 </div>

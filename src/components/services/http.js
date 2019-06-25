@@ -3,32 +3,28 @@ import NxAxios from 'next-axios';
 
 const Http = nx.declare({
   extends: NxAxios,
-  statics: {
-    instance: null,
-    getInstance: function () {
-      if (!Http.instance) {
-        Http.instance = new Http();
-      }
-      return Http.instance;
-    }
-  },
   methods: {
-    setRequestInterceptor: function () {
+    getToken: function() {
+      const { login } = nx.$local;
+      if (login) {
+        return `Bearer ${login.token}`;
+      }
+      return null;
+    },
+    setTokenInterceptor: function() {
       this.axios.interceptors.request.use((config) => {
-        nx.mix(config.headers.common, { clientType: 'h5' });
+        const token = this.getToken();
+        token && nx.mix(config.headers.common, { Authorization: token });
         return config;
       });
     },
-    contentType: function () {
-      return 'application/x-www-form-urlencoded';
+    setRequestInterceptor: function() {
+      this.setTokenInterceptor();
     },
-    transformParam: function (inData) {
-      return nx.param(inData);
-    },
-    toData: function (inResponse) {
+    toData: function(inResponse) {
       return inResponse.data;
     },
-    error: function (inError) {
+    error: function(inError) {
       console.log('error!');
       console.log(inError);
     }
