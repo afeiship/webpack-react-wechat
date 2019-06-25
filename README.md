@@ -1,9 +1,9 @@
-# webpack-react-spa
-> Webpack for spa project.
+# webpack-react-wechat
+> Wechat h5 page based on webpack and react.
 
 ## get-started:
 ```bash
-git clone https://github.com/afeiship/webpack-react-spa.git
+git clone https://github.com/afeiship/webpack-react-wechat.git
 npm install
 npm run dev
 ```
@@ -13,6 +13,7 @@ npm run dev
 - nx.\$memory
 - nx.\$local
 - nx.\$session
+- nx.\$global
 
 ## feature:
 - [x] react 16+
