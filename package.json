@@ -46,6 +46,7 @@
     "next-param": "github:afeiship/next-param",
     "next-react-redux": "github:afeiship/next-react-redux",
     "next-store": "github:afeiship/next-store",
+    "rake-git": "github:afeiship/rake-git",
     "rc-banner-anim": "^1.0.0",
     "rc-queue-anim": "^1.4.1",
     "rc-tween-one": "^1.7.2",
